@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Agregar Tailwin CSS al proyecto -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+</head>
+<body class="bg-gray-100 h-screen flex justify-center items-center">
+    <div class="bg-white p-8 rounded shadow-lg max-w-xs w-full">
+        <h1 class="text-2xl font-bold text-center">Calculadora</h1>
+        <div class="mb-4">
+            <input type="text" name="" id="display" class="w-full border rounded p-2 text-right" readonly>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="col-span-2 bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('7')">7</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('8')">8</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('9')">9</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('/')">/</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('4')">4</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('5')">5</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('6')">6</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('*')">*</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('1')">1</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('2')">2</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('3')">3</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('-')">-</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('0')">0</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('.')">.</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="clearDisplay('C')">C</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="addToDisplay('+')">+</button>
+            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg col-span-2" onclick="calcular()">=</button>
+        </div>
+    </div>
+    <script src="controlador.js"></script>
+</body>
+</html>
